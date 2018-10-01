@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE BMECAT SYSTEM "bmecat_new_catalog_1_2.dtd">
+
+<BMECAT version="1.2" xmlns="http://www.bmecat.org/bmecat/1.2/bmecat_new_catalog">
+    <HEADER>
+        <GENERATOR_INFO>Erstellt von Otto-office.com - Catalog_Interface</GENERATOR_INFO>
+        <CATALOG>
+            <LANGUAGE>DEU</LANGUAGE>
+            <CATALOG_ID>Chefs Online GmbH&#45;0&#46;002</CATALOG_ID>
+            <CATALOG_VERSION>0.002</CATALOG_VERSION>
+            <CATALOG_NAME>Onlinekatalog www.otto-office.com</CATALOG_NAME>
+            <DATETIME type="generation_date">
+                <DATE>2007-08-14</DATE>
+                <TIME>16:05:36</TIME>
+            </DATETIME>
+            <TERRITORY>DE</TERRITORY>
+            <CURRENCY>EUR</CURRENCY>
+            <MIME_ROOT>http://www.otto-office.com</MIME_ROOT>
+            <PRICE_FLAG type="incl_freight">FALSE</PRICE_FLAG>
+            <PRICE_FLAG type="incl_packing">TRUE</PRICE_FLAG>
+            <PRICE_FLAG type="incl_assurance">FALSE</PRICE_FLAG>
+            <PRICE_FLAG type="incl_duty">FALSE</PRICE_FLAG>
+        </CATALOG>
+        <BUYER>
+            <BUYER_ID>46c1a81ebd746</BUYER_ID>
+            <BUYER_NAME>Chefs Online GmbH</BUYER_NAME>
+        </BUYER>
+        <SUPPLIER>
+            <SUPPLIER_ID type="supplier_specific">otto-office</SUPPLIER_ID>
+            <SUPPLIER_NAME>OTTO-Office.com</SUPPLIER_NAME>
+            <ADDRESS type="supplier">
+                <NAME>OTTO Office GmbH &#38; Co KG</NAME>
+                <NAME2>www.otto-office.com</NAME2>
+                <URL>http://www.otto-office.com</URL>
+            </ADDRESS>
+        </SUPPLIER>
+    </HEADER>
+    <T_NEW_CATALOG>
+        <ARTICLE>
+            <SUPPLIER_AID>INT-65839</SUPPLIER_AID>
+            <ARTICLE_DETAILS>
+                <DESCRIPTION_SHORT>Fineliner &#187;Point 88&#169;&#171; 20er&#45;Big&#45;Box &#187;Kreativ&#171; inkl&#46; Textmarker &#187;Navigator&#171;</DESCRIPTION_SHORT>
+                <DESCRIPTION_LONG>Fineliner &#187;Point 88&#169;&#171; 20er&#45;Big&#45;Box &#187;Kreativ&#171;&#44; Strichbreite&#58; 0&#44;4 mm&#44; in 20 verschiedenen Farben&#44; Inhalt pro Pack&#58; 20 St&#252;ck&#44; Tinte auf Wasserbasis inkl&#46; Textmarker &#187;Navigator&#171;&#44; Strichst&#228;rke&#58; 1&#45;4 mm&#44; mit Kappe&#44; Taschenclip und rutschfester Griffzone&#44; Farbe&#58; gelb</DESCRIPTION_LONG>
+                <MANUFACTURER_NAME>Stabilo</MANUFACTURER_NAME>
+                <DELIVERY_TIME>1.0</DELIVERY_TIME>
+                <ARTICLE_STATUS type="new"></ARTICLE_STATUS>
+            </ARTICLE_DETAILS>
+            <ARTICLE_ORDER_DETAILS>
+                <ORDER_UNIT>SET</ORDER_UNIT>
+            </ARTICLE_ORDER_DETAILS>
+            <ARTICLE_PRICE_DETAILS>
+                <ARTICLE_PRICE price_type="net_customer">
+                    <PRICE_AMOUNT>4.49</PRICE_AMOUNT>
+                    <PRICE_CURRENCY>EUR</PRICE_CURRENCY>
+                    <TAX>0.19</TAX>
+                    <LOWER_BOUND>1</LOWER_BOUND>
+                    <TERRITORY>DE</TERRITORY>
+                </ARTICLE_PRICE>
+            </ARTICLE_PRICE_DETAILS>
+            <MIME_INFO>
+                <MIME>
+                    <MIME_TYPE>image/gif</MIME_TYPE>
+                    <MIME_SOURCE>/de/mediadata/item/global/default_70de.gif</MIME_SOURCE>
+                    <MIME_PURPOSE>thumbnail</MIME_PURPOSE>
+                </MIME>
+                <MIME>
+                    <MIME_TYPE>image/gif</MIME_TYPE>
+                    <MIME_SOURCE>/de/mediadata/item/global/default_150de.gif</MIME_SOURCE>
+                    <MIME_PURPOSE>normal</MIME_PURPOSE>
+                </MIME>
+                <MIME>
+                    <MIME_TYPE>image/gif</MIME_TYPE>
+                    <MIME_SOURCE>/de/mediadata/item/global/default_600de.gif</MIME_SOURCE>
+                    <MIME_PURPOSE>detail</MIME_PURPOSE>
+                </MIME>
+            </MIME_INFO>
+        </ARTICLE>
+    </T_NEW_CATALOG>
+</BMECAT>

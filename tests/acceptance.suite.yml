@@ -4,9 +4,25 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
-actor: AcceptanceTester
+class_name: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
+        - WebDriver
+        - Asserts
         - \Helper\Acceptance
+        - \Kolyunya\Codeception\Module\MarkupValidator
+    config:
+        WebDriver:
+            url: ''
+            browser: chrome
+            port: 9515 # ChromeDriver port
+            window_size: false # hack for chrome (http://phptest.club/t/how-to-run-headless-chrome-in-codeception/1544)
+            wait: 15
+            connection_timeout: 120 # hack for very slow views (e.g. StammdatenKundenDetails)
+            request_timeout: 120 # hack for very slow views (e.g. StammdatenKundenDetails)
+            pageload_timeout: 200 # hack for very slow views (e.g. AnalyseBestellungenView)
+            clear_cookies: false
+            capabilities:
+                chromeOptions:
+                    args: []
+                    binary: "/usr/bin/chromium-browser"

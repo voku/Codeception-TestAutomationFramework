@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetector">
+    <phpmd_settings>
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/Framework/thirdparty/phpmd.phar" />
+    </phpmd_settings>
+  </component>
+  <component name="PhpCSFixer">
+    <phpcsfixer_settings>
+      <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/Framework/thirdparty/php-cs-fixer.phar" />
+    </phpcsfixer_settings>
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration standards="MySource;PEAR;PHPCompatibility;PSR1;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/Framework/thirdparty/phpcs.phar" />
+    </phpcs_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/thirdparty/composer/kolyunya/codeception-markup-validator" />
+      <path value="$PROJECT_DIR$/thirdparty/composer/psr/log" />
+      <path value="$PROJECT_DIR$/thirdparty/composer/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+</project>

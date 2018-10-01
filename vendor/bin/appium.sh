@@ -1,1 +1,0 @@
-../me-io/selenium-appium-server/bin/appium.sh

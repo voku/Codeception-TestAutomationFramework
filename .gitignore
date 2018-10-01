@@ -1,4 +1,60 @@
-# Created by .ignore support plugin (hsz.mobi)
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Created by http://www.gitignore.io
 
+### [app] ####################################################
+
+# php tools
+CodeSniffer.conf
+.php_cs.cache
+.phan
+
+# tests
+/tests/_output/*
+!/tests/_output/.gitkeep
+acceptance_load_times.log
+
+
+### IDE Stuff ########################################################
+/phpdoc
+/.project
+/.settings
+/.buildpath
+/.vscode
+
+### NetBeans #########################################################
+nbproject
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+### PhpStorm #########################################################
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
 .idea/*
+# allow scopes
+!.idea/scopes/
+!.idea/scopes/*
+# allow code-styles
+!.idea/codeStyles/
+.idea/codeStyles/*
+!.idea/codeStyles/codeStyleConfig.xml
+# allow inspections
+!.idea/inspectionProfiles
+.idea/inspectionProfiles/*
+!.idea/inspectionProfiles/Project_Default.xml
+!.idea/inspectionProfiles/profiles_settings.xml
+# plugin hints
+!.idea/externalDependencies.xml
+# allow php settings
+!.idea/php.xml
+# allow sql settings
+!.idea/sqldialects.xml

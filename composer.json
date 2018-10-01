@@ -1,11 +1,62 @@
 {
-    "require-dev": {
-        "php": "~7.0",
-        "phpunit/phpunit": "6.0",
-        "codeception/codeception": "^2.4",
-        "codeception/specify": "*",
-        "codeception/verify": "*",
-        "me-io/selenium-appium-server": "~1",
-        "facebook/webdriver": "~1"
-    }
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
+    "php": "~5.5|~7.0"
+  },
+  "require-dev": {
+    "composer/xdebug-handler": "1.*@dev",
+    "kolyunya/codeception-markup-validator": "3.*@dev"
+  },
+  "replace": {
+    "codeception/codeception": "2.*"
+  },
+  "config": {
+    "platform": {
+      "php": "5.5.9"
+    },
+    "github-protocols": [
+      "git",
+      "https",
+      "http"
+    ],
+    "optimize-autoloader": true,
+    "apcu-autoloader": false,
+    "sort-packages": true,
+    "vendor-dir": "thirdparty/composer/"
+  },
+  "extra": {
+    "bin-dir": "bin/",
+    "vendor-dir": "thirdparty/composer/"
+  },
+  "autoload": {
+    "psr-4": {
+    },
+    "classmap": [
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+    },
+    "classmap": [
+    ],
+    "files": [
+    ]
+  },
+  "scripts": {
+    "keep-vendor-in-git": [
+      "echo [WARNING] Delete all .git dirs",
+      "rm -rf vendor/composer/**/**/.git",
+      "echo [WARNING] Delete all .svn dirs",
+      "rm -rf vendor/composer/**/**/.svn",
+      "echo [WARNING] Delete all .hg dirs",
+      "rm -rf vendor/composer/**/**/.hg"
+    ],
+    "post-install-cmd": [
+      "@keep-vendor-in-git"
+    ],
+    "post-update-cmd": [
+      "@keep-vendor-in-git"
+    ]
+  }
 }

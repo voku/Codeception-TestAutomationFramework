@@ -1,10 +1,5 @@
-actor: ApiTester
+class_name: ApiTester
 modules:
     enabled:
-        - \Helper\Api
-        - Asserts
         - REST:
-             url: https://www.tajawal.com/api
-             depends: PhpBrowser
-             connection_timeout: 50000
-             request_timeout: 50000
+            depends: PhpBrowser

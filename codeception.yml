@@ -1,20 +1,176 @@
+actor: Tester
+
 paths:
+    # where the tests stored
     tests: tests
-    output: tests/_output
+
+    # directory for fixture data
     data: tests/_data
+
+    # directory for support code
     support: tests/_support
+
+    # directory for output
+    log: tests/_output
+
+    # directory for environment configuration
     envs: tests/_envs
-actor_suffix: Tester
+
+settings:
+    # name of bootstrap that will be used
+    # each bootstrap file should be
+    # inside a suite directory.
+    bootstrap: _bootstrap.php
+
+    # enable/disable syntax of test files before loading
+    # for php < 7 exec('php -l') is used
+    # disable if you need to speed up tests execution
+    lint: true
+
+    # randomize test order
+    shuffle: false
+
+    # by default it's false on Windows
+    # use [ANSICON](https://github.com/adoxa/ansicon) to colorize output.
+    colors: true
+
+    # Generate XML JUnit report using strict schema
+    # Avoid putting additional report fields like steps or scenario names tot it
+    # Required for XML reports on Jenkins CI
+    strict_xml: false
+
+    # Tests (especially functional) can take a lot of memory
+    # We set a high limit for them by default.
+    memory_limit: 1024M
+
+    # This value controls whether PHPUnit attempts to backup global variables
+    # See https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.backupGlobals
+    backup_globals: true
+
+    # PHPUnit can be strict about tests that do not test anything
+    # See https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.useless-tests
+    report_useless_tests: false
+
+    # PHPUnit can be strict about output during tests.
+    # See https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.output-during-test-execution
+    disallow_test_output: false
+
+    # PHPUnit can be strict about tests that manipulate global state.
+    # See https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.global-state-manipulation
+    be_strict_about_changes_to_global_state: false
+
+    # Log the incomplete and skipped tests into junit report
+    # See https://phpunit.de/manual/current/en/appendixes.configuration.html
+    # Section logging > junit
+    log_incomplete_skipped: false
+
 extensions:
     enabled:
-        - Codeception\Extension\RunFailed
+    - Codeception\Extension\RunFailed
 
-gherkin:
-    contexts:
-      default:
-        - AcceptanceTester
-        - AdditionalSteps
+params:
+- env
+
 reporters:
     xml: Codeception\PHPUnit\Log\JUnit
     html: Codeception\PHPUnit\ResultPrinter\HTML
     report: Codeception\PHPUnit\ResultPrinter\Report
+
+coverage:
+    enabled: true
+    # url of file which includes c3 router.
+    # As in http://codeception.com/docs/11-Codecoverage#Local-Server
+    #
+    # start the php-server first: (cd App/html/ && php -S localhost:8888 index_wrapper.php > /dev/null 2>&1 &);
+    c3_url: 'http://localhost:8888'
+    remote: false
+    remote_context_options:
+        http:
+            timeout: 120
+        ssl:
+            verify_peer: false
+    whitelist:
+        include:
+        - App/html/*.php
+        - App/modules/*.php
+        - Framework/includes/*.php
+        - Framework/modules/*.php
+
+# special settings for different environments (http://codeception.com/docs/07-AdvancedUsage#Environments)
+#
+# e.g.:
+# thirdparty/codecept_php55.phar --env="local" run acceptance
+env:
+
+    foo:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://foo.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--no-sandbox", "--window-size=1920,1080"]
+
+    foo-headless:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://foo.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--headless", "--no-sandbox", "--window-size=1920,1080"]
+
+    bar:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://bar.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--no-sandbox", "--window-size=1920,1080"]
+
+    bar-headless:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://bar.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--headless", "--no-sandbox", "--window-size=1920,1080"]
+
+    lall:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://bar.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--no-sandbox", "--window-size=1920,1080"]
+
+    lall-headless:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://bar.localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--headless", "--no-sandbox", "--window-size=1920,1080"]
+
+    local:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--no-sandbox", "--window-size=1920,1080"]
+
+    local-headless:
+        modules:
+            config:
+                WebDriver:
+                    url: 'http://localhost:8887'
+                    capabilities:
+                        chromeOptions:
+                            args: ["--headless", "--no-sandbox", "--window-size=1920,1080"]
+
