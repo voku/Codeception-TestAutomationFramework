@@ -14,6 +14,10 @@ foreach ($files as $file) {
     ) {
         require_once $file;
 
-        echo (new $_GET['view'])->show();
+        if (isset($_GET['api']) && $_GET['api'] == 1) {
+            echo json_encode(['view' => (new $_GET['view'])->show()]);
+        } else {
+            echo (new $_GET['view'])->show();
+        }
     }
 }
