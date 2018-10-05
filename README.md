@@ -100,5 +100,5 @@
 
 ### LINKS
 
-- [Codeception - WebDriver](http://codeception.com/docs/modules/WebDriver
+- [Codeception - WebDriver](http://codeception.com/docs/modules/WebDriver)
 - [Headless Chrome in Codeception](http://phptest.club/t/how-to-run-headless-chrome-in-codeception/1544)
