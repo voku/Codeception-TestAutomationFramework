@@ -58,3 +58,6 @@ nb-configuration.xml
 !.idea/php.xml
 # allow sql settings
 !.idea/sqldialects.xml
+# allow run config
+!.idea/runConfigurations/
+!.idea/runConfigurations/*

@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="unit" type="CodeceptionConfigurationType" factoryName="Codeception">
+    <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/codeception.yml" file="$PROJECT_DIR$/src/modules/something/example/SomethingExamplePageView_Lall_AcceptanceCest.php" method="" scope="Type" selected_type="unit" use_alternative_configuration_file="true" />
+    <method v="2" />
+  </configuration>
+</component>

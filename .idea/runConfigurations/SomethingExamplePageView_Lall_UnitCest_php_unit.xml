@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SomethingExamplePageView_Lall_UnitCest.php unit" type="CodeceptionConfigurationType" factoryName="Codeception">
+    <PhpTestRunnerSettings file="$PROJECT_DIR$/src/modules/something/example/SomethingExamplePageView_Lall_UnitCest.php" method="" scope="File" selected_type="unit" options="unit" />
+    <method v="2" />
+  </configuration>
+</component>
