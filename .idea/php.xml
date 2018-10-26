@@ -20,6 +20,7 @@
       <path value="$PROJECT_DIR$/thirdparty/composer/kolyunya/codeception-markup-validator" />
       <path value="$PROJECT_DIR$/thirdparty/composer/psr/log" />
       <path value="$PROJECT_DIR$/thirdparty/composer/composer" />
+      <path value="$PROJECT_DIR$/thirdparty/composer/codeception/visualception" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

@@ -9,5 +9,11 @@ class SomethingExamplePageView_Lall_AcceptanceCest extends MainAcceptanceCest {
         $I->wantTo('Test if we can see the example page of the something module.');
         $I->amOnUrlWithHtmlValidate($I, $I->httpWebServer . '/index.php?view=' . SomethingExamplePageView::getUrl());
         $I->see('My First Heading', 'body');
+
+        $I->dontSeeVisualChanges(
+            'first_headline',
+            '#first_headline',
+            array()
+        );
     }
 }

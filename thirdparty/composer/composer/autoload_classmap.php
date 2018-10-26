@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
+    'Codeception\\Module\\ImageDeviationException' => $vendorDir . '/codeception/visualception/module/ImageDeviationException.php',
+    'Codeception\\Module\\VisualCeption' => $vendorDir . '/codeception/visualception/module/VisualCeption.php',
+    'Codeception\\Module\\VisualCeption\\Utils' => $vendorDir . '/codeception/visualception/module/Utils.php',
     'Composer\\XdebugHandler\\PhpConfig' => $vendorDir . '/composer/xdebug-handler/src/PhpConfig.php',
     'Composer\\XdebugHandler\\Process' => $vendorDir . '/composer/xdebug-handler/src/Process.php',
     'Composer\\XdebugHandler\\Status' => $vendorDir . '/composer/xdebug-handler/src/Status.php',

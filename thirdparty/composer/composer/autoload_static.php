@@ -42,6 +42,9 @@ class ComposerStaticInit976bbbe1d3cc2dcbbc40ab9a3125a235
     );
 
     public static $classMap = array (
+        'Codeception\\Module\\ImageDeviationException' => __DIR__ . '/..' . '/codeception/visualception/module/ImageDeviationException.php',
+        'Codeception\\Module\\VisualCeption' => __DIR__ . '/..' . '/codeception/visualception/module/VisualCeption.php',
+        'Codeception\\Module\\VisualCeption\\Utils' => __DIR__ . '/..' . '/codeception/visualception/module/Utils.php',
         'Composer\\XdebugHandler\\PhpConfig' => __DIR__ . '/..' . '/composer/xdebug-handler/src/PhpConfig.php',
         'Composer\\XdebugHandler\\Process' => __DIR__ . '/..' . '/composer/xdebug-handler/src/Process.php',
         'Composer\\XdebugHandler\\Status' => __DIR__ . '/..' . '/composer/xdebug-handler/src/Status.php',

@@ -54,10 +54,16 @@
   thirdparty/codecept_php55.phar --env="local-headless" run
   ```
 
-  ##### run all unit-test
+  ##### run all unit-tests
   
   ```bash
   thirdparty/codecept_php55.phar --env="local" run unit
+  ```
+  
+  ##### run all api-tests
+  
+  ```bash
+  thirdparty/codecept_php55.phar --env="local" run api
   ```
   
   ##### run all acceptance-test in non "headless"-mode

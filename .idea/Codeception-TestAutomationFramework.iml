@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/thirdparty/composer/codeception/visualception" />
       <excludeFolder url="file://$MODULE_DIR$/thirdparty/composer/composer" />
       <excludeFolder url="file://$MODULE_DIR$/thirdparty/composer/kolyunya/codeception-markup-validator" />
       <excludeFolder url="file://$MODULE_DIR$/thirdparty/composer/psr/log" />
