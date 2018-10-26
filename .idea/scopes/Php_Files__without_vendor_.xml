@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Php-Files (without vendor)" pattern="file[Codeception-TestAutomationFramework]:**/*.php&amp;&amp;!file[Codeception-TestAutomationFramework]:thirdparty/*" />
+</component>
