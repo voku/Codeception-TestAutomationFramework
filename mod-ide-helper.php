@@ -4,7 +4,7 @@
 // init
 $str = '';
 
-$_ENV['APP_STAGE'] = 'dev';
+$_ENV['APP_STAGE'] = 'a';
 require_once __DIR__ . '/src/inc_globals.php';
 
 $constants = get_defined_constants(true);
