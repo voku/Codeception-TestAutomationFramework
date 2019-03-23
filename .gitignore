@@ -11,6 +11,9 @@
 
 ### [app] ####################################################
 
+# ide helper
+.phpstorm.meta.php
+
 # php tools
 CodeSniffer.conf
 .php_cs.cache

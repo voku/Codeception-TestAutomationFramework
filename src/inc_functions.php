@@ -1,6 +1,17 @@
 <?php
 
 /**
+ * @param string $name
+ * @param mixed  $value
+ * @param bool   $case_insensitive
+ */
+function default_define($name, $value, bool $case_insensitive = false) {
+    if (!defined($name)) {
+        define($name, $value, $case_insensitive);
+    }
+}
+
+/**
  * get a argument from the CLI
  *
  * @param string $cli_argument <p>e.g. "--env"</p>
