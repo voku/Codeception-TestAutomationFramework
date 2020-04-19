@@ -57,7 +57,7 @@ class AcceptanceTester extends \Codeception\Actor {
      * @param string           $fileUrl
      */
     public function amOnUrlWithHtmlValidate($I, $fileUrl) {
-        static $CHECKED_URL_CACHE = array();
+        //static $CHECKED_URL_CACHE = array();
 
         // $startTime = \microtime(true);
         $I->amOnUrl($fileUrl);
@@ -67,6 +67,7 @@ class AcceptanceTester extends \Codeception\Actor {
         // so lets check if we are really on the correct url ...
         $I->cantSeeCurrentUrlEquals($fileUrl);
 
+        /*
         $cacheKey = md5($fileUrl);
         if (array_key_exists($cacheKey, $CHECKED_URL_CACHE) === true) {
             // already checked, so skip the html-check
@@ -90,9 +91,9 @@ class AcceptanceTester extends \Codeception\Actor {
                     'ignoredErrors'  => array_merge($ignoreGeneralError, $ignoreViewError),
                 )
             );
-        } catch (\GuzzleHttp\Exception\ConnectException $e) { // GuzzleHttp from "codecept_php55.phar"
+        } catch (\GuzzleHttp\Exception\ConnectException $e) { // GuzzleHttp from "codecept.phar"
             $I->comment('connection error: ' . $e->getMessage());
-        } catch (\GuzzleHttp\Exception\RequestException $e) { // GuzzleHttp from "codecept_php55.phar"
+        } catch (\GuzzleHttp\Exception\RequestException $e) { // GuzzleHttp from "codecept.phar"
             $I->comment('request error: ' . $e->getMessage());
         } catch (\Exception $e) {
             if ($e->getMessage() == 'Unable to obtain current page markup.') {
@@ -104,6 +105,7 @@ class AcceptanceTester extends \Codeception\Actor {
         }
 
         $CHECKED_URL_CACHE[$cacheKey] = 1;
+        */
     }
 
     /**

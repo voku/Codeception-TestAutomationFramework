@@ -141,7 +141,7 @@ if ($debug) {
 
 passthru($runCommand);
 
-$codeceptCliCommand = 'cd ' . __DIR__ . '/../ && ' . $coverage_cli_extra . ' ' . 'thirdparty/codecept_php55.phar ' . $debug . ' ' . $coverage . ' --fail-fast --env="' . $env_from_cli . '" run ' . $codecept_options;
+$codeceptCliCommand = 'cd ' . __DIR__ . '/../ && ' . $coverage_cli_extra . ' ' . 'thirdparty/codecept.phar ' . $debug . ' ' . $coverage . ' --fail-fast --env="' . $env_from_cli . '" run ' . $codecept_options;
 
 if ($debug) {
     echo "\n\n" . $codeceptCliCommand . "\n\n";

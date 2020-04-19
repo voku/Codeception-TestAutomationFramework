@@ -10,6 +10,8 @@ class SomethingExamplePageView_Lall_AcceptanceCest extends MainAcceptanceCest {
         $I->amOnUrlWithHtmlValidate($I, $I->httpWebServer . '/index.php?view=' . SomethingExamplePageView::getUrl());
         $I->see('My First Heading', 'body');
 
+        $I->wait(10);
+
         $I->dontSeeVisualChanges(
             'first_headline',
             '#first_headline',

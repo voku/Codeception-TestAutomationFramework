@@ -12,6 +12,51 @@ function default_define($name, $value, bool $case_insensitive = false) {
 }
 
 /**
+ * Check if PHP script was executed by shell.
+ *
+ * @return bool
+ */
+function is_cli(): bool {
+    if (\defined('RUNNING_IN_CLI')) {
+        return true;
+    }
+
+    return \PHP_SAPI === 'cli';
+}
+
+/**
+ * @return bool
+ */
+function is_ajax_request(): bool {
+
+    // @codingStandardsIgnoreStart
+
+    if (!empty($_POST['xajaxr'])) {
+        return true;
+    }
+
+    /** @noinspection NullCoalescingOperatorCanBeUsedInspection */
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+        $http_x_requested_with = $_SERVER['HTTP_X_REQUESTED_WITH'];
+    } else {
+        $http_x_requested_with = '';
+    }
+
+    // @codingStandardsIgnoreEnd
+
+    return $http_x_requested_with
+           &&
+           \strtoupper($http_x_requested_with) === 'XMLHTTPREQUEST';
+}
+
+/**
+ * @return bool
+ */
+function is_gitlab_ci(): bool {
+    return \getenv('GITLAB_CI') === 'yes';
+}
+
+/**
  * get a argument from the CLI
  *
  * @param string $cli_argument <p>e.g. "--env"</p>

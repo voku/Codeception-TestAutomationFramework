@@ -18,7 +18,7 @@
 
   ##### check the config
   ```bash
-  thirdparty/codecept_php55.phar config:validate
+  thirdparty/codecept.phar config:validate
   ```
   
 #### 2.1) run tests
@@ -51,25 +51,25 @@
   ##### run all tests local in "headless"-mode
 
   ```bash
-  thirdparty/codecept_php55.phar --env="local-headless" run
+  thirdparty/codecept.phar --env="local-headless" run
   ```
 
   ##### run all unit-tests
   
   ```bash
-  thirdparty/codecept_php55.phar --env="local" run unit
+  thirdparty/codecept.phar --env="local" run unit
   ```
   
   ##### run all api-tests
   
   ```bash
-  thirdparty/codecept_php55.phar --env="local" run api
+  thirdparty/codecept.phar --env="local" run api
   ```
   
   ##### run all acceptance-test in non "headless"-mode
 
   ```bash
-  thirdparty/codecept_php55.phar --env="local" run acceptance
+  thirdparty/codecept.phar --env="local" run acceptance
   ```
   
   ##### run one test (and it also run the "ChromeDriver" in the background)
@@ -81,7 +81,7 @@
   ##### run one unit-test
   
   ```bash
-  thirdparty/codecept_php55.phar --env="local" run unit src/modules/something/example/SomethingExamplePageView_Lall_UnitCest.php
+  thirdparty/codecept.phar --env="local" run unit src/modules/something/example/SomethingExamplePageView_Lall_UnitCest.php
   ```
   
   ##### run one unit-test (with code-coverage)
@@ -93,7 +93,7 @@
   ##### run one acceptance-test
 
   ```bash
-  thirdparty/codecept_php55.phar --env="local" run acceptance src/modules/something/example/SomethingExamplePageView_Lall_AcceptanceCest.php
+  thirdparty/codecept.phar --env="local" run acceptance src/modules/something/example/SomethingExamplePageView_Lall_AcceptanceCest.php
   ```
 
 ------------------------------------------------------------------------------------------------------------

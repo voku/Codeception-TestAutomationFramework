@@ -50,8 +50,8 @@ if (!function_exists('__c3_error')) {
 
 // Autoload Codeception classes
 if (!class_exists('\\Codeception\\Codecept')) {
-    if (file_exists(__DIR__ . '/codecept_php55.phar')) {
-        require_once 'phar://' . __DIR__ . '/codecept_php55.phar/autoload.php';
+    if (file_exists(__DIR__ . '/codecept.phar')) {
+        require_once 'phar://' . __DIR__ . '/codecept.phar/autoload.php';
     } elseif (file_exists(__DIR__ . '/codecept.phar')) {
         require_once 'phar://' . __DIR__ . '/codecept.phar/autoload.php';
     } elseif (stream_resolve_include_path(__DIR__ . '/vendor/autoload.php')) {

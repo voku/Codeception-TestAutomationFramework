@@ -1,5 +1,10 @@
 actor: Tester
 
+# name of bootstrap that will be used
+# each bootstrap file should be
+# inside a suite directory.
+bootstrap: _bootstrap.php
+
 paths:
     # where the tests stored
     tests: tests
@@ -17,10 +22,6 @@ paths:
     envs: tests/_envs
 
 settings:
-    # name of bootstrap that will be used
-    # each bootstrap file should be
-    # inside a suite directory.
-    bootstrap: _bootstrap.php
 
     # enable/disable syntax of test files before loading
     # for php < 7 exec('php -l') is used
@@ -99,7 +100,7 @@ coverage:
 # special settings for different environments (http://codeception.com/docs/07-AdvancedUsage#Environments)
 #
 # e.g.:
-# thirdparty/codecept_php55.phar --env="local" run acceptance
+# thirdparty/codecept.phar --env="local" run acceptance
 env:
 
     foo:

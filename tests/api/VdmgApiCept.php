@@ -88,7 +88,7 @@ if ($coverage_from_cli) {
     $coverage = '--coverage --coverage-xml --coverage-html';
 }
 
-$codeceptCliCommand = 'thirdparty/codecept_php55.phar ' . $debug . ' ' . $coverage . ' --env="' . $env . '" run api';
+$codeceptCliCommand = 'thirdparty/codecept.phar ' . $debug . ' ' . $coverage . ' --env="' . $env . '" run api';
 
 foreach ($testViewFiles as $appModuleFilesView) {
     echo "Test-File: " . $appModuleFilesView . "\n";

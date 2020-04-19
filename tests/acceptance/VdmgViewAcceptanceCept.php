@@ -90,7 +90,7 @@ if ($coverage_from_cli) {
     $coverage_cli_extra = ' php -d"xdebug.remote_enable=1" -d"xdebug_remote_autostart=1" ';
 }
 
-$codeceptCliCommand = $coverage_cli_extra . 'thirdparty/codecept_php55.phar ' . $debug . ' ' . $coverage . ' --fail-fast --env="' . $env . '" run acceptance';
+$codeceptCliCommand = $coverage_cli_extra . 'thirdparty/codecept.phar ' . $debug . ' ' . $coverage . ' --fail-fast --env="' . $env . '" run acceptance';
 
 //
 // test all test classes
